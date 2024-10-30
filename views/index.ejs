@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+<body class="column-center">
+    <div class="column-center box">
+        <h1>Select a drink category!</h1>
+    </div>
+    
+    <% if (locals.categories) { %>
+        <% categories.drinks.forEach(cat => { %>
+                <form action="/recipe" method="get">
+                    <% console.log("inside ", cat.strCategory) %>
+                    <input type="hidden" name="type" value="<%= cat.strCategory %>">
+                    <button class="column-center box button-cat" type="submit"><%= cat.strCategory %></button>
+                </form>
+        <% }) %>
+    <% } %>
+</body>
+</html>

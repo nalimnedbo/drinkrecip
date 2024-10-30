@@ -1,0 +1,39 @@
+<%- include("partials/header.ejs") %>
+<body class="row-center">
+    <% if (locals.drink) { %>
+
+    <div id="div-left" class="column-center">
+        <div class="column-left box">
+            <h1><%= drink.strDrink %></h1>
+        </div>
+        <div class="column-left box">
+            <p id="glass"><span>Glass to use:</span> <%= drink.strGlass %></p>
+            <p id="ingredients"><span>Ingredients:</span> </p>
+            <ul>
+            <% for (i = 1; i <= 15; i++) { %>
+                <% if (!drink["strIngredient" + i]) { break; } %>
+                <li><%= drink["strMeasure" + i] %> <%= drink["strIngredient" + i] %></li>
+            <% } %>
+            </ul>
+        </div>
+        <div class="column-left box">
+            <p id="instructions"><span>How to make:</span></p>
+            <p><%= drink.strInstructions %></p>
+        </div>
+    </div>
+
+    <div class="column-center box">
+        <div class="row-center">
+            <form action="/" method="get">
+                <button class="option-button" type="submit">Select other category</button>
+            </form>
+            <form action="/recipe" method="get">
+                <input type="hidden" name="type" value="<%= drink.strCategory %>">
+                <button class="option-button right" type="submit">Get new <%= drink.strCategory %> drink</button>
+            </form>
+        </div>
+        <img src="<%= drink.strDrinkThumb %>" />
+    </div>
+    <% } %>
+</body>
+</html>

@@ -1,0 +1,111 @@
+.column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+body {
+    background: rgb(140,82,255);
+    background: linear-gradient(90deg, rgba(140,82,255,1) 0%, rgba(255,145,77,1) 100%);
+    gap: 2vh;
+    padding: 3vh;
+}
+
+h1 {
+    margin: 3vh 0 3vh 0;
+    font-family: "Hammersmith One";
+    font-weight: normal;
+    font-weight: 4vh;
+}
+
+.column-left > h1 {
+    margin: 0;
+}
+
+p, li {
+    font-family: "Hanken Grotesk";
+    margin: 0;
+    font-size: 2vh;
+}
+
+ul {
+    margin: 0;
+}
+
+span {
+    font-weight: bold;
+}
+
+.box {
+    width: 50vw;
+    border-radius: 2vh;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 1vh;
+}
+
+.button-cat {
+    border-style: none;
+    font-family: "Hammersmith One";
+    font-size: 2vh;
+}
+
+#div-left {
+    gap: 2vh;
+}
+
+#div-left > .box, .row-center > .box {
+    width: 45vw;
+    padding: 4vh;
+}
+
+.row-center > .box {
+    height: 70vh;
+    justify-content: space-around;
+}
+
+#glass {
+    margin-bottom: 1vh;
+}
+
+img {
+    height: 55vh;
+    border-radius: 2vh;
+    margin: 0;
+}
+
+.option-button {
+    border-style: none;
+    width: 20vw;
+    height: 6vh;
+    border-radius: 2vh;
+    font-family: "Hanken Grotesk";
+    background-color: #8c52ff;
+    color: white;
+    font-weight: bold;
+    font-size: 2vh;
+}
+
+.option-button.right {
+    background-color: rgb(0, 0, 0, 0);
+    border: 0.5vh solid #8c52ff ;
+    color: #8c52ff;
+}
+
+.box > .row-center {
+    width: 100%;
+    justify-content: space-around;
+}
